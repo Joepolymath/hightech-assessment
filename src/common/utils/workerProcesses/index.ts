@@ -1,6 +1,7 @@
-const cluster = require('cluster');
-const os = require('os');
-const logging = require('../../logging');
+import os from 'os';
+import cluster from 'cluster';
+import logging from '../../logging';
+
 /**
  * Setup number of worker processes to share port which will be defined while setting up server
  */
@@ -46,4 +47,4 @@ const setupWorkerProcesses = () => {
   });
 };
 
-module.exports = setupWorkerProcesses;
+export default setupWorkerProcesses;
