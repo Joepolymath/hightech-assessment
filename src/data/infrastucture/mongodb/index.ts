@@ -1,8 +1,9 @@
 import mongoose from 'mongoose';
 import logging from '../../../common/logging/index';
 import { create } from '../../models/mongodb/index';
+import { DBInitType } from '../../../@types/interfaces/server.types';
 
-export const init = (dbConnectionString: string) => {
+export const init: DBInitType = (dbConnectionString: string) => {
   mongoose.connection.on('error', (err) => {
     logging.error(`Error! DB Connection failed. Error: ${err}`);
     return err;
