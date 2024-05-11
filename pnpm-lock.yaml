@@ -41,6 +41,9 @@ dependencies:
   morgan:
     specifier: ^1.10.0
     version: 1.10.0
+  throw-http-errors:
+    specifier: ^4.0.1
+    version: 4.0.1
   winston:
     specifier: ^3.13.0
     version: 3.13.0
@@ -2701,6 +2704,10 @@ packages:
     resolution: {integrity: sha512-qQiRWsU/wvNolI6tbbCKd9iKaTnCXsTwVxhhKM6nctPdujTyztjlbUkUTUymidWcMnZ5pWR0ej4a0tjsW021vw==}
     dependencies:
       real-require: 0.2.0
+    dev: false
+
+  /throw-http-errors@4.0.1:
+    resolution: {integrity: sha512-3S9iNGPf5b38DMNYCiVrR12lRWIczmV0rzDiVoVHRc6wXUf+4W4wA0XU6hQD83xVJPMRPpu2K2ki9+s+hw0sVQ==}
     dev: false
 
   /to-regex-range@5.0.1:
