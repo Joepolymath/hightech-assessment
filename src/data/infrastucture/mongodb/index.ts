@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import logging from '../../../common/logging/index';
 import { create } from '../../models/mongodb/index';
-import { DBInitType } from '../../../@types/interfaces/server.types';
+import { DBInitType } from '../../../@types/abstractions/db.abstractions';
 
 export const init: DBInitType = (dbConnectionString: string) => {
   mongoose.connection.on('error', (err) => {

@@ -1,5 +1,5 @@
 import { Document, FilterQuery, Model, Types } from 'mongoose';
-import { IRepository } from '../../../@types/interfaces/repository.types';
+import { IRepository } from '../../../@types/abstractions/repository.abstractions';
 
 class DAL<T extends Document> {
   private model: Model<T>;

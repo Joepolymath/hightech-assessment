@@ -17,7 +17,7 @@ const getFormat = () =>
 
 const requestLogger = expressWinston.logger({
   transports: getTransports(),
-  format: getFormat(),
+  //   format: getFormat(),
   colorize: true,
   expressFormat: true,
   meta: true,
@@ -25,7 +25,7 @@ const requestLogger = expressWinston.logger({
 
 const errorLogger = expressWinston.errorLogger({
   transports: getTransports(),
-  format: getFormat(),
+  //   format: getFormat(),
 });
 
 const logger = winston.createLogger({
@@ -33,7 +33,7 @@ const logger = winston.createLogger({
     process.env.NODE_ENV !== PRODUCTION_ENV
       ? VERBOSE_LOGGING_LVL
       : INFO_LOGGING_LVL,
-  format: getFormat(),
+  //   format: getFormat(),
   transports: getTransports(),
 });
 

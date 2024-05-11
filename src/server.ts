@@ -1,23 +1,21 @@
-import { DBInitType, IDb, IServer } from './@types/interfaces/server.types';
-import { init as expressInit } from './presentation/http/express/index';
-import { init as fastifyInit } from './presentation/http/fastify';
 import dataInfrastucture from './data/infrastucture';
 import signals from './signals';
 import { DB_URI, PORT as PORT_NUMBER } from './configs/env.config';
+import { DBInitType } from './@types/abstractions/db.abstractions';
+import { IServer } from './@types/abstractions/server.abstractions';
+import ExpressFactory from './presentation/http/express/index';
+import FastifyFactory from './presentation/http/fastify';
 
-let services;
-
-class App implements IServer {
+class App {
   private server: any;
-
   constructor(
-    readonly init = expressInit,
+    readonly serverFactory: IServer = new ExpressFactory(),
     private PORT: number = Number(PORT_NUMBER) || 5002,
     private dbConnector: DBInitType = dataInfrastucture.mongodbInit
   ) {}
 
   public bootstrap() {
-    const app = this.init(5);
+    const app = this.serverFactory.init();
     this.server = app.listen(this.PORT, () => {
       console.log(`Server spitting fire 🔥🔥🔥 on ${this.PORT}`);
     });

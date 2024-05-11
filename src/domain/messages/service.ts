@@ -1,4 +1,4 @@
-import { IRepository } from '../../@types/interfaces/repository.types';
+import { IRepository } from '../../@types/abstractions/repository.abstractions';
 import { IMessage } from '../../@types/message';
 import { MessageModel } from '../../data/models/mongodb/message.model';
 import MessageRepo from '../../data/repositories/mongodb/messages';
