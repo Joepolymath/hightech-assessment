@@ -7,3 +7,7 @@ export interface IRepository {
   deleteOne: (query: any) => Promise<any>;
   findById?: (query: any) => Promise<any>;
 }
+
+export interface IMountRepo {
+  messageRepo: IRepository;
+}

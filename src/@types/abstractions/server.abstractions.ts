@@ -1,8 +1,8 @@
 import http from 'http';
+import { IServices } from './services';
 
 export interface IServer {
-  init: () => http.Server<
-    typeof http.IncomingMessage,
-    typeof http.ServerResponse
-  >;
+  init: (
+    services: IServices
+  ) => http.Server<typeof http.IncomingMessage, typeof http.ServerResponse>;
 }

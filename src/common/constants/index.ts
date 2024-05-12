@@ -7,6 +7,8 @@ const DEFAULT_PAGINATION_LIMIT = 25;
 const MAX_PAGINATION_LIMIT = 100;
 const DEFAULT_PAGINATION_PAGE = 1;
 
+export const API_PREFIX = '/api/v1/';
+
 module.exports = {
   PRODUCTION_ENV,
   VERBOSE_LOGGING_LVL,

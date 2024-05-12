@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@dimosbotsaris/express-async-handler": "^1.1.2",
     "@dimosbotsaris/express-error-handler": "^1.0.3",
     "body-parser": "^1.20.2",
     "compression": "^1.7.4",
@@ -20,9 +21,11 @@
     "express-winston": "^4.2.0",
     "fastify": "^4.27.0",
     "helmet": "^7.1.0",
+    "inversify": "^6.0.2",
     "mongoose": "^8.3.4",
     "mongoose-paginate": "^5.0.3",
     "morgan": "^1.10.0",
+    "reflect-metadata": "^0.2.2",
     "throw-http-errors": "^4.0.1",
     "winston": "^3.13.0"
   },
